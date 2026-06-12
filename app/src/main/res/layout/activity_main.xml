@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+
         android:text="pre-cooking your dinner with ideas."
         android:textColor="#3c2225"
         android:textSize="14sp"
@@ -38,18 +39,20 @@
         android:id="@+id/card"
         android:layout_width="569dp"
         android:layout_height="713dp"
+        android:layout_marginTop="42dp"
         app:cardElevation="4dp"
         app:cardCornerRadius="30dp"
         tools:layout_editor_absoluteX="115dp"
         tools:layout_editor_absoluteY="190dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraightTop_toBottomOf="@id/subhead">
+        app:layout_constraintTop_toBottomOf="@id/subhead">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="725dp"
-            android:background="#d8bea3">
+            android:background="#d8bea3"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/img_container"
@@ -57,10 +60,10 @@
                 android:layout_height="395dp"
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="31dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="30dp"
                 app:cardElevation="0dp"
-                app:cardCornerRadius="30dp">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -132,17 +135,17 @@
         android:id="@+id/spinner"
         android:layout_width="245dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        app:layout_constaintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card"
-        tools:layout_editor_absoluteX="116dp" />
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="108dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="245dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="436dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card" />
 
