@@ -5,13 +5,13 @@ plugins {
 android {
     namespace = "com.example.app_1_dinnergen"
     compileSdk {
-        version = release(36)
+        version = release(37)
     }
 
     defaultConfig {
         applicationId = "com.example.app_1_dinnergen"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
