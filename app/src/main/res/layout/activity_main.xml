@@ -88,35 +88,42 @@
 
             <TextView
                 android:id="@+id/dish_desc"
-                android:layout_width="500dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
                 android:text="@string/dummy_text"
                 android:textColor="#3c2225"
                 android:textSize="15sp"
+                android:gravity="start"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dish" />
 
             <TextView
                 android:id="@+id/dish"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="464dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:gravity="start"
                 android:text="@string/dish"
                 android:textColor="#3c2225"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/img_container" />
 
             <Button
                 android:id="@+id/view_btn"
-                android:layout_width="511dp"
+                android:layout_width="0dp"
                 android:layout_height="77dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginBottom="31dp"
                 android:background="@drawable/view_btn_style"
                 android:text="@string/view_recipe"
                 android:textColor="#f4e8ce"
@@ -124,7 +131,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dish_desc" />
+                app:layout_constraintBottom_toBottomOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
