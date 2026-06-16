@@ -26,6 +26,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val url1 = "https://minimalistbaker.com/easy-pesto-pasta-bowls-with-crispy-tofu-veggies/"
+        val url2 = "https://thewoksoflife.com/tomato-tofu/"
+        val url3 = "https://www.wellplated.com/tofu-stir-fry/"
+        val url4 = "https://ohmyveggies.com/vegan-sheet-pan-potatoes-tofu/#%f0%9f%93%96-recipe"
+        val url5 = "https://www.saltandlavender.com/creamy-tomato-pasta/"
+        val url6 = "https://www.eatingwell.com/recipe/7919563/spaghetti-spinach-with-sun-dried-tomato-cream-sauce/"
+        val url7 = "https://thisitaliankitchen.com/pasta-e-patate/#wprm-recipe-container-22087"
+        val url8 = "https://bakerbynature.com/easy-tomato-and-spinach-pasta/"
+        val url9 = "https://anitalianinmykitchen.com/tomato-bake/"
+        val url10 = "https://thewoksoflife.com/vegan-mapo-tofu/"
+        val url11 = "https://www.seriouseats.com/spaghetti-cacio-e-pepe-recipe"
+        val url12 = "https://natashaskitchen.com/classic-bruschetta-recipe/"
+        val url13 = "https://www.onceuponachef.com/recipes/creamed-spinach.html"
+        val url14 = "https://www.simplyrecipes.com/recipes/duchess_potatoes/"
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist1)
         val adapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist2)
