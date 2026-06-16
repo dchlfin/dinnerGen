@@ -20,6 +20,14 @@ class MainActivity : AppCompatActivity() {
     val dropdownlist1 = arrayOf("Tofu", "Pasta", "Tomatoes", "Spinach", "Potato")
     val dropdownlist2 = dropdownlist1.copyOf()
 
+    private fun openUrl(url: String) {
+        if(url.contains("http://") || url.contains("https://")) {
+            val sendIntent = Intent(Intent.ACTION_VIEW, url.toUri())
+            val chooser = Intent.createChooser(sendIntent, "Choose your browser")
+            startActivity(chooser)
+        }
+    }
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,11 +42,12 @@ class MainActivity : AppCompatActivity() {
         val url7 = "https://thisitaliankitchen.com/pasta-e-patate/#wprm-recipe-container-22087"
         val url8 = "https://bakerbynature.com/easy-tomato-and-spinach-pasta/"
         val url9 = "https://anitalianinmykitchen.com/tomato-bake/"
-        val url10 = "https://thewoksoflife.com/vegan-mapo-tofu/"
-        val url11 = "https://www.seriouseats.com/spaghetti-cacio-e-pepe-recipe"
-        val url12 = "https://natashaskitchen.com/classic-bruschetta-recipe/"
-        val url13 = "https://www.onceuponachef.com/recipes/creamed-spinach.html"
-        val url14 = "https://www.simplyrecipes.com/recipes/duchess_potatoes/"
+        val url10 = "https://www.teaforturmeric.com/easy-spinach-potato-curry-aloo-palak/"
+        val url11 = "https://thewoksoflife.com/vegan-mapo-tofu/"
+        val url12 = "https://www.seriouseats.com/spaghetti-cacio-e-pepe-recipe"
+        val url13 = "https://natashaskitchen.com/classic-bruschetta-recipe/"
+        val url14 = "https://www.onceuponachef.com/recipes/creamed-spinach.html"
+        val url15 = "https://www.simplyrecipes.com/recipes/duchess_potatoes/"
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist1)
         val adapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist2)
@@ -135,23 +144,54 @@ class MainActivity : AppCompatActivity() {
                 dish.text = "Duchess Potatoes"
                 dishdesc.text = "Piped mashed potatoes baked until golden and crispy."
             }
-
         }
 
         viewbtn.setOnClickListener {
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 1 || spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 0) {
-                if(url1.contains("http://") || url1.contains("https://")) {
-                    val sendIntent: Intent = Intent(Intent.ACTION_VIEW, url1.toUri())
-                    val chooser: Intent = Intent.createChooser(sendIntent, "Choose your browser")
-                    startActivity(chooser)
-                }
+                openUrl(url1)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 0) {
-                if(url1.contains("http://") || url1.contains("https://")) {
-                    val sendIntent: Intent = Intent(Intent.ACTION_VIEW, url1.toUri())
-                    val chooser: Intent = Intent.createChooser(sendIntent, "Choose your browser")
-                    startActivity(chooser)
-                }
+                openUrl(url2)
+            }
+            if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 0) {
+                openUrl(url3)
+            }
+            if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 0) {
+                openUrl(url4)
+            }
+            if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 1) {
+                openUrl(url5)
+            }
+            if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 1) {
+                openUrl(url6)
+            }
+            if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 1) {
+                openUrl(url7)
+            }
+            if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 2) {
+                openUrl(url8)
+            }
+            if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 2) {
+                openUrl(url9)
+            }
+            if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 3) {
+                openUrl(url10)
+            }
+//            duplicates
+            if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 0) {
+                openUrl(url11)
+            }
+            if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 1) {
+                openUrl(url12)
+            }
+            if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 2) {
+                openUrl(url13)
+            }
+            if(spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 3) {
+                openUrl(url14)
+            }
+            if(spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 4) {
+                openUrl(url15)
             }
         }
     }
