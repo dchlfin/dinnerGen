@@ -13,7 +13,6 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 
-
 class MainActivity : AppCompatActivity() {
 
     val dropdownlist1 = arrayOf("Tofu", "Pasta", "Tomatoes", "Spinach", "Potato")
@@ -44,14 +43,8 @@ class MainActivity : AppCompatActivity() {
         val url8 = "https://bakerbynature.com/easy-tomato-and-spinach-pasta/"
         val url9 = "https://anitalianinmykitchen.com/tomato-bake/"
         val url10 = "https://www.teaforturmeric.com/easy-spinach-potato-curry-aloo-palak/"
-        val url11 = "https://thewoksoflife.com/vegan-mapo-tofu/"
-        val url12 = "https://www.seriouseats.com/spaghetti-cacio-e-pepe-recipe"
-        val url13 = "https://natashaskitchen.com/classic-bruschetta-recipe/"
-        val url14 = "https://www.onceuponachef.com/recipes/creamed-spinach.html"
-        val url15 = "https://www.simplyrecipes.com/recipes/duchess_potatoes/"
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist1)
-        val adapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist2)
+//        adapters
         val mArrayAdapter = ArrayAdapter<Any?>(this, R.layout.spinner_list, dropdownlist1)
         val mArrayAdapter2 = ArrayAdapter<Any?>(this, R.layout.spinner_list, dropdownlist2)
 
@@ -70,9 +63,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 //        setting the adapters for the view purpose
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
-//        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_item)
         mArrayAdapter.setDropDownViewResource(R.layout.spinner_list)
+        mArrayAdapter2.setDropDownViewResource(R.layout.spinner_list)
+
 
 //        1st spinner
         spinner1.adapter = mArrayAdapter
@@ -184,15 +177,19 @@ class MainActivity : AppCompatActivity() {
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 1) {
                 viewbtn.isEnabled = false
+                openUrl(url7)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 2) {
                 viewbtn.isEnabled = false
+                openUrl(url8)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 2) {
                 viewbtn.isEnabled = false
+                openUrl(url9)
             }
             if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 3) {
                 viewbtn.isEnabled = false
+                openUrl(url10)
             }
         }
     }
