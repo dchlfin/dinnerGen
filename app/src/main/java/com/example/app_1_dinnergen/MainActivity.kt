@@ -11,6 +11,7 @@ import android.view.View
 import android.content.Intent
 //import android.content
 import android.net.Uri
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         val spinner2: Spinner = findViewById(R.id.spinner2)
         val dish: TextView = findViewById(R.id.dish)
         val dishdesc: TextView = findViewById(R.id.dish_desc)
+        val dishimg: ImageView = findViewById(R.id.image)
 
 //        setting the adapters for the view purpose
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
@@ -87,63 +89,78 @@ class MainActivity : AppCompatActivity() {
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 1 || spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Tofu Pesto Pasta"
                 dishdesc.text = "Pasta tossed in cherry tomatoes and shallots baked in olive oil and crispy tofu covered in pesto sauce."
+                dishimg.setImageResource(R.drawable.d1)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Tomato Tofu"
                 dishdesc.text = "Stir-fried tofu and scallion softened in a thick, sweet and savory tomato sauce."
+                dishimg.setImageResource(R.drawable.d2)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Tofu Stir Fry"
                 dishdesc.text = "Crispy tofu and fresh broccoli and spinach sauteed in a quick and easy garlic sesame sauce."
+                dishimg.setImageResource(R.drawable.d3)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Vegan Sheet Pan Potatoes and Tofu"
                 dishdesc.text = "Potatoes and tofu baked in the delicious juices of mushrooms and onions."
+                dishimg.setImageResource(R.drawable.d4)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 1) {
                 dish.text = "Tomato Pasta"
                 dishdesc.text = "Pasta tossed in a creamy tomato sauce."
+                dishimg.setImageResource(R.drawable.d5)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 1) {
                 dish.text = "Spaghetti with Spinach and Creamy Tomato Sauce"
                 dishdesc.text = "Pasta and spinach tossed in a creamy sun-dried tomato sauce."
+                dishimg.setImageResource(R.drawable.d6)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 1) {
                 dish.text = "Pasata e Patate"
                 dishdesc.text = "Pasta and potatoes tossed in a creamy and pancetta-infused sauce."
+                dishimg.setImageResource(R.drawable.d7)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 2) {
                 dish.text = "Tomato and Spinach Pasta"
                 dishdesc.text = "Pasta tossed in juicy cherry tomatoes, fresh spinach, olive oil, and a kick of red pepper flakes."
+                dishimg.setImageResource(R.drawable.d8)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 2) {
                 dish.text = "Potato and Tomato Bake"
                 dishdesc.text = "Potatoes and tomatoes baked in garlic and herb juices, crisped and topped with breadcrumbs and cheese."
+                dishimg.setImageResource(R.drawable.d9)
             }
             if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 3) {
                 dish.text = "Spinach and Potato Curry"
                 dishdesc.text = "Tender potatoes and wilted spinach simmered in a warm, spiced curry sauce."
+                dishimg.setImageResource(R.drawable.d10)
             }
 //            duplicates
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Vegan Mapo Tofu"
                 dishdesc.text = "Silken tofu in a bold, spicy Sichuan sauce with Shiitake mushrooms."
+                dishimg.setImageResource(R.drawable.d11)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 1) {
                 dish.text = "Cacio e Pepe"
                 dishdesc.text = "Pasta tossed in a simple, creamy pecorino and black pepper sauce."
+                dishimg.setImageResource(R.drawable.d12)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 2) {
                 dish.text = "Tomato Bruschetta"
                 dishdesc.text = "Fresh tomatoes and basil on crispy toasted bread."
+                dishimg.setImageResource(R.drawable.d13)
             }
             if(spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 3) {
                 dish.text = "Creamed Spinach"
                 dishdesc.text = "Spinach slow-cooked in a rich, buttery cream sauce."
+                dishimg.setImageResource(R.drawable.d14)
             }
             if(spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 4) {
                 dish.text = "Duchess Potatoes"
                 dishdesc.text = "Piped mashed potatoes baked until golden and crispy."
+                dishimg.setImageResource(R.drawable.d15)
             }
         }
 
