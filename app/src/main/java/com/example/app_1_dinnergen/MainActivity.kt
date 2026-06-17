@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist1)
         val adapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownlist2)
+        val mArrayAdapter = ArrayAdapter<Any?>(this, R.layout.spinner_list, dropdownlist1)
+        val mArrayAdapter2 = ArrayAdapter<Any?>(this, R.layout.spinner_list, dropdownlist2)
+
         val viewbtn: Button = findViewById(R.id.view_btn)
         val generatebtn: Button = findViewById(R.id.generate_btn)
         val spinner1: Spinner = findViewById(R.id.spinner)
@@ -67,11 +70,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 //        setting the adapters for the view purpose
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_item)
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
+//        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_item)
+        mArrayAdapter.setDropDownViewResource(R.layout.spinner_list)
 
 //        1st spinner
-        spinner1.adapter = adapter
+        spinner1.adapter = mArrayAdapter
         spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
@@ -80,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 //        2nd spinner
-        spinner2.adapter = adapter2
+        spinner2.adapter = mArrayAdapter2
         spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
@@ -95,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                 dish.text = "Tofu Pesto Pasta"
                 dishdesc.text = "Pasta tossed in cherry tomatoes and shallots baked in olive oil and crispy tofu covered in pesto sauce."
                 dishimg.setImageResource(R.drawable.d1)
-                generateBtnStatus(true)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Tomato Tofu"
