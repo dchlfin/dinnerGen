@@ -136,80 +136,44 @@ class MainActivity : AppCompatActivity() {
                 dishdesc.text = "Tender potatoes and wilted spinach simmered in a warm, spiced curry sauce."
                 dishimg.setImageResource(R.drawable.d10)
             }
-//            duplicates
-            if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 0) {
-                dish.text = "Vegan Mapo Tofu"
-                dishdesc.text = "Silken tofu in a bold, spicy Sichuan sauce with Shiitake mushrooms."
-                dishimg.setImageResource(R.drawable.d11)
-            }
-            if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 1) {
-                dish.text = "Cacio e Pepe"
-                dishdesc.text = "Pasta tossed in a simple, creamy pecorino and black pepper sauce."
-                dishimg.setImageResource(R.drawable.d12)
-            }
-            if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 2) {
-                dish.text = "Tomato Bruschetta"
-                dishdesc.text = "Fresh tomatoes and basil on crispy toasted bread."
-                dishimg.setImageResource(R.drawable.d13)
-            }
-            if(spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 3) {
-                dish.text = "Creamed Spinach"
-                dishdesc.text = "Spinach slow-cooked in a rich, buttery cream sauce."
-                dishimg.setImageResource(R.drawable.d14)
-            }
-            if(spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 4) {
-                dish.text = "Duchess Potatoes"
-                dishdesc.text = "Piped mashed potatoes baked until golden and crispy."
-                dishimg.setImageResource(R.drawable.d15)
-            }
         }
 
         viewbtn.setOnClickListener {
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 1 || spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 0) {
+                viewbtn.isEnabled = true
                 openUrl(url1)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 0) {
+                viewbtn.isEnabled = true
                 openUrl(url2)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 0) {
+                viewbtn.isEnabled = true
                 openUrl(url3)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 0) {
+                viewbtn.isEnabled = true
                 openUrl(url4)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 1) {
+                viewbtn.isEnabled = true
                 openUrl(url5)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 1) {
+                viewbtn.isEnabled = true
                 openUrl(url6)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 1) {
-                openUrl(url7)
+                viewbtn.isEnabled = false
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 2) {
-                openUrl(url8)
+                viewbtn.isEnabled = false
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 2) {
-                openUrl(url9)
+                viewbtn.isEnabled = false
             }
             if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 3) {
-                openUrl(url10)
-            }
-//            duplicates
-            if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 0) {
-                openUrl(url11)
-            }
-            if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 1) {
-                openUrl(url12)
-            }
-            if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 2) {
-                openUrl(url13)
-            }
-            if(spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 3) {
-                openUrl(url14)
-            }
-            if(spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 4) {
-                openUrl(url15)
+                viewbtn.isEnabled = false
             }
         }
     }
