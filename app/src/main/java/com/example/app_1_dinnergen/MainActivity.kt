@@ -9,8 +9,6 @@ import android.widget.TextView
 import android.widget.AdapterView
 import android.view.View
 import android.content.Intent
-//import android.content
-import android.net.Uri
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
@@ -20,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     val dropdownlist1 = arrayOf("Tofu", "Pasta", "Tomatoes", "Spinach", "Potato")
     val dropdownlist2 = dropdownlist1.copyOf()
+
 
     private fun openUrl(url: String) {
         if(url.contains("http://") || url.contains("https://")) {
@@ -61,6 +60,12 @@ class MainActivity : AppCompatActivity() {
         val dishdesc: TextView = findViewById(R.id.dish_desc)
         val dishimg: ImageView = findViewById(R.id.image)
 
+        viewbtn.isEnabled = false
+
+        fun viewBtnStatus(boolean: Boolean) {
+            viewbtn.isEnabled = boolean
+        }
+
 //        setting the adapters for the view purpose
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_item)
@@ -90,51 +95,61 @@ class MainActivity : AppCompatActivity() {
                 dish.text = "Tofu Pesto Pasta"
                 dishdesc.text = "Pasta tossed in cherry tomatoes and shallots baked in olive oil and crispy tofu covered in pesto sauce."
                 dishimg.setImageResource(R.drawable.d1)
+                generateBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Tomato Tofu"
                 dishdesc.text = "Stir-fried tofu and scallion softened in a thick, sweet and savory tomato sauce."
                 dishimg.setImageResource(R.drawable.d2)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Tofu Stir Fry"
                 dishdesc.text = "Crispy tofu and fresh broccoli and spinach sauteed in a quick and easy garlic sesame sauce."
                 dishimg.setImageResource(R.drawable.d3)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 0) {
                 dish.text = "Vegan Sheet Pan Potatoes and Tofu"
                 dishdesc.text = "Potatoes and tofu baked in the delicious juices of mushrooms and onions."
                 dishimg.setImageResource(R.drawable.d4)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 2 || spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 1) {
                 dish.text = "Tomato Pasta"
                 dishdesc.text = "Pasta tossed in a creamy tomato sauce."
                 dishimg.setImageResource(R.drawable.d5)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 1) {
                 dish.text = "Spaghetti with Spinach and Creamy Tomato Sauce"
                 dishdesc.text = "Pasta and spinach tossed in a creamy sun-dried tomato sauce."
                 dishimg.setImageResource(R.drawable.d6)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 1) {
                 dish.text = "Pasata e Patate"
                 dishdesc.text = "Pasta and potatoes tossed in a creamy and pancetta-infused sauce."
                 dishimg.setImageResource(R.drawable.d7)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 2) {
                 dish.text = "Tomato and Spinach Pasta"
                 dishdesc.text = "Pasta tossed in juicy cherry tomatoes, fresh spinach, olive oil, and a kick of red pepper flakes."
                 dishimg.setImageResource(R.drawable.d8)
+                viewBtnStatus(true)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 2) {
                 dish.text = "Potato and Tomato Bake"
                 dishdesc.text = "Potatoes and tomatoes baked in garlic and herb juices, crisped and topped with breadcrumbs and cheese."
                 dishimg.setImageResource(R.drawable.d9)
+                viewBtnStatus(true)
             }
             if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 3) {
                 dish.text = "Spinach and Potato Curry"
                 dishdesc.text = "Tender potatoes and wilted spinach simmered in a warm, spiced curry sauce."
                 dishimg.setImageResource(R.drawable.d10)
+                viewBtnStatus(true)
             }
         }
 
