@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        dish links
         val url1 = "https://minimalistbaker.com/easy-pesto-pasta-bowls-with-crispy-tofu-veggies/"
         val url2 = "https://thewoksoflife.com/tomato-tofu/"
         val url3 = "https://www.wellplated.com/tofu-stir-fry/"
