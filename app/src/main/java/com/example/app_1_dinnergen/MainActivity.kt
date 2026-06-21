@@ -193,6 +193,7 @@ class MainActivity : AppCompatActivity() {
                 showDuplicateDialog()
             }
             if (spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 2 || spinner2.selectedItemPosition == 2 && spinner1.selectedItemPosition == 2) {
+                viewbtn.isEnabled = false
                 showDuplicateDialog()
             }
             if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 3 || spinner2.selectedItemPosition == 3 && spinner1.selectedItemPosition == 3) {
