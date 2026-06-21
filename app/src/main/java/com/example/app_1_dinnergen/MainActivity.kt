@@ -9,8 +9,11 @@ import android.widget.TextView
 import android.widget.AdapterView
 import android.view.View
 import android.content.Intent
+import android.view.LayoutInflater
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.net.toUri
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +21,20 @@ class MainActivity : AppCompatActivity() {
     val dropdownlist1 = arrayOf("Tofu", "Pasta", "Tomatoes", "Spinach", "Potato")
     val dropdownlist2 = dropdownlist1.copyOf()
 
+    private fun showWelcomeDialog() {
+        val view: View = layoutInflater.inflate(R.layout.welcome_modal, null)
+        val welcomeDone: Button = view.findViewById(R.id.welcomeStart)
+
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val alertDialog: AlertDialog = builder.create()
+
+        welcomeDone.setOnClickListener{
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
 
     private fun openUrl(url: String) {
         if(url.contains("http://") || url.contains("https://")) {
@@ -31,6 +48,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        showWelcomeDialog()
 
 //        dish links
         val url1 = "https://minimalistbaker.com/easy-pesto-pasta-bowls-with-crispy-tofu-veggies/"
