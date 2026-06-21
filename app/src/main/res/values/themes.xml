@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
