@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/welcomeDesc"
-            android:text="Choose two ingredients from the given dropdowns and let dinnerGen cook up a dish for your next dinner idea!"
+            android:text="Choose two different ingredients from the given dropdowns and let dinnerGen cook up a dish for your next dinner idea!"
             android:textColor="@color/colorTextPrimary"
             android:gravity="center_horizontal"
             android:layout_marginTop="16dp"
