@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">app_1_dinnergen</string>
+    <string name="app_name">dinnerGen</string>
     <string name="dinnergen">dinnerGen</string>
     <string name="pre_cooking_your_dinner_with_ideas">pre-cooking your dinner with ideas.</string>
     <string name="dummy_text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adisipiscing elit quisque faucibus</string>
