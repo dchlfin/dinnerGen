@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             alertDialog.dismiss()
         }
 
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         alertDialog.show()
     }
 

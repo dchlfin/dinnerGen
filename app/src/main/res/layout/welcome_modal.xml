@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
-            android:letterSpacing="0.1"
             android:text="Welcome"
             android:textColor="@color/colorTextPrimary"
             android:textSize="30sp"
@@ -46,7 +45,7 @@
         
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:id="@+id/welcomeStart"
             android:text="Let's Get Started!"
             android:layout_marginTop="16dp"
