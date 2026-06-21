@@ -184,6 +184,25 @@ class MainActivity : AppCompatActivity() {
                 dishimg.setImageResource(R.drawable.d10)
                 viewBtnStatus(true)
             }
+            if (spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 0 || spinner2.selectedItemPosition == 0 && spinner1.selectedItemPosition == 0) {
+                viewbtn.isEnabled = false
+                showDuplicateDialog()
+            }
+            if (spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 1 || spinner2.selectedItemPosition == 1 && spinner1.selectedItemPosition == 1) {
+                viewbtn.isEnabled = false
+                showDuplicateDialog()
+            }
+            if (spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 2 || spinner2.selectedItemPosition == 2 && spinner1.selectedItemPosition == 2) {
+                showDuplicateDialog()
+            }
+            if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 3 || spinner2.selectedItemPosition == 3 && spinner1.selectedItemPosition == 3) {
+                viewbtn.isEnabled = false
+                showDuplicateDialog()
+            }
+            if (spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 4 || spinner2.selectedItemPosition == 4 && spinner1.selectedItemPosition == 4) {
+                viewbtn.isEnabled = false
+                showDuplicateDialog()
+            }
         }
 
         viewbtn.setOnClickListener {
