@@ -37,6 +37,22 @@ class MainActivity : AppCompatActivity() {
         alertDialog.show()
     }
 
+    private fun showDuplicateDialog() {
+        val view: View = layoutInflater.inflate(R.layout.duplicate_modal, null)
+        val duplicateDone: Button = view.findViewById(R.id.duplicateStart)
+
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val alertDialog: AlertDialog = builder.create()
+
+        duplicateDone.setOnClickListener{
+            alertDialog.dismiss()
+        }
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        alertDialog.show()
+    }
+
     private fun openUrl(url: String) {
         if(url.contains("http://") || url.contains("https://")) {
             val sendIntent = Intent(Intent.ACTION_VIEW, url.toUri())
@@ -196,19 +212,19 @@ class MainActivity : AppCompatActivity() {
                 openUrl(url6)
             }
             if(spinner1.selectedItemPosition == 1 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 1) {
-                viewbtn.isEnabled = false
+                viewbtn.isEnabled = true
                 openUrl(url7)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 3 || spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 2) {
-                viewbtn.isEnabled = false
+                viewbtn.isEnabled = true
                 openUrl(url8)
             }
             if(spinner1.selectedItemPosition == 2 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 2) {
-                viewbtn.isEnabled = false
+                viewbtn.isEnabled = true
                 openUrl(url9)
             }
             if (spinner1.selectedItemPosition == 3 && spinner2.selectedItemPosition == 4 || spinner1.selectedItemPosition == 4 && spinner2.selectedItemPosition == 3) {
-                viewbtn.isEnabled = false
+                viewbtn.isEnabled = true
                 openUrl(url10)
             }
         }
