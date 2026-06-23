@@ -17,11 +17,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/welcomeDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="105dp"
+            android:gravity="center_horizontal"
+            android:text="Choose two different ingredients from the given dropdowns and let dinnerGen cook up a dish for your next dinner idea!"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTitle" />
+
+        <TextView
             android:id="@+id/welcomeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
+            android:paddingTop="50dp"
             android:text="Welcome"
             android:textColor="@color/colorTextPrimary"
             android:textSize="30sp"
@@ -29,29 +44,15 @@
             app:layout_constraintTop_toBottomOf="@id/welcomeImg"
             tools:layout_editor_absoluteX="0dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/welcomeDesc"
-            android:text="Choose two different ingredients from the given dropdowns and let dinnerGen cook up a dish for your next dinner idea!"
-            android:textColor="@color/colorTextPrimary"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="120dp"
-            android:layout_marginStart="120dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcomeTitle"/>
-        
         <Button
             android:layout_width="wrap_content"
             android:layout_height="55dp"
             android:id="@+id/welcomeStart"
             android:text="Let's Get Started!"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="50dp"
             android:backgroundTint="#F86015"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +64,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/welcomeImg"
             android:src="@drawable/welcome_icon"
-            android:paddingTop="51dp"
+            android:paddingTop="50dp"
             android:layout_marginBottom="150dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
