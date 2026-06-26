@@ -65,9 +65,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        showWelcomeDialog()
-
 //        dish links
         val url1 = "https://minimalistbaker.com/easy-pesto-pasta-bowls-with-crispy-tofu-veggies/"
         val url2 = "https://thewoksoflife.com/tomato-tofu/"
