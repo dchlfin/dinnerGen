@@ -9,11 +9,9 @@ import android.widget.TextView
 import android.widget.AdapterView
 import android.view.View
 import android.content.Intent
-import android.view.LayoutInflater
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.net.toUri
 
 class MainActivity : AppCompatActivity() {
@@ -65,6 +63,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        showWelcomeDialog()
 //        dish links
         val url1 = "https://minimalistbaker.com/easy-pesto-pasta-bowls-with-crispy-tofu-veggies/"
         val url2 = "https://thewoksoflife.com/tomato-tofu/"
