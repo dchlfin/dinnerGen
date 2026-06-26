@@ -181,6 +181,8 @@ class MainActivity : AppCompatActivity() {
                 dishimg.setImageResource(R.drawable.d10)
                 viewBtnStatus(true)
             }
+
+//            duplicates
             if (spinner1.selectedItemPosition == 0 && spinner2.selectedItemPosition == 0 || spinner2.selectedItemPosition == 0 && spinner1.selectedItemPosition == 0) {
                 viewbtn.isEnabled = false
                 showDuplicateDialog()
